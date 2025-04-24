@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved
+-->
+<widget-definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widget-definition.xsd"
+	id="raz.zuren.backoffice.widgets.ZRestaurantsWidget">
+	<name>ZRestaurantes</name>
+	<description>Um Widget pra ajudar a definir onde vai ser o al'mosso</description>
+	<defaultTitle>ZRestaurantes</defaultTitle>
+	<author>SassaMutema</author>
+	<version>1.0</version>
+	<view src="zrestaurant.zul" />
+	<keywords>
+		<keyword>restaurante</keyword>
+	</keywords>
+	<controller class="raz.zuren.backoffice.widgets.ZRestaurantsController" />
+</widget-definition>

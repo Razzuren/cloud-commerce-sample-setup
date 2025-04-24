@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://www.zkoss.org/2005/zul"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:h="http://www.w3.org/1999/xhtml"
+		xmlns:w="http://www.zkoss.org/2005/zk/client"
+		xmlns:zk="http://www.zkoss.org/2005/zk"
+		xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.hybris.com/schema/cockpitng/zul/zul.xsd"
+ 		height="100%">
+
+	<div height="100%" class="iframe-container">
+
+		<div>
+			<label id="label" value="${labels.hello}" visible="false"/>
+		</div>
+
+<n:table xmlns:n="http://www.zkoss.org/2005/zk/native">
+<n:tr>
+<n:th>Restaurant name</n:th>
+<n:th>Score</n:th>
+</n:tr>
+<![CDATA[${widgetModel.TABLE}]]>
+</n:table>
+
+		<div>
+			<label value="${labels.hello}" sclass="yw-labelstyle" visible="false"/>
+		</div>
+
+	</div>
+
+</widget>
+
+
+

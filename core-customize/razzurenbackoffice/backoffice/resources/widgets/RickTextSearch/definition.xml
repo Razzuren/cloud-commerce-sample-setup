@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved
+-->
+<widget-definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widget-definition.xsd"
+				   id="raz.zuren.backoffice.widgets.textsearch">
+	<name>Rick Text Search</name>
+	<description>Input widget for any text based search (and RickRoll pranks)</description>
+	<defaultTitle>Text Search</defaultTitle>
+	<author>Sassa Mutema</author>
+	<version>0.1</version>
+
+	<sockets>
+		<input type="java.lang.Object" id="clearQuery"/>
+		<input type="java.lang.Boolean" id="enabled"/>
+		<input type="java.lang.String" id="query"/>
+		<output type="java.lang.String" id="query"/>
+	</sockets>
+
+	<view src="textsearch.zul"/>
+	<controller class="raz.zuren.backoffice.widgets.RickTextSearchController"/>
+
+	<keywords>
+		<keyword>Search</keyword>
+	</keywords>
+
+	<settings>
+  		<setting key="enabledByDefault" type="Boolean" default-value="true"/>
+  	</settings>
+</widget-definition>

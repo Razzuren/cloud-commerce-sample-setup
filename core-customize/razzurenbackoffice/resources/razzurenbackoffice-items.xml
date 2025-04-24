@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved
+-->
+<!--
+	ATTENTION: This is just an example file. You have to edit it according to your needs.
+-->
+
+<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<enumtypes>
+		<enumtype code="UserIframeWrapper" generate="true" autocreate="true" dynamic="true">
+	 		<value code="iframewrapper" />
+			<value code="blinkiframewrapper" />
+		</enumtype>
+	</enumtypes>
+
+	<itemtypes>
+		<itemtype code="UserIframeSettings" autocreate="true" generate="true">
+			<deployment table="UserIframeSettings" typecode="12345" />
+			<attributes>
+				<attribute qualifier="src" type="java.lang.String" >
+					<description>Source URL of Playlist</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="wrapperclass" type="UserIframeWrapper">
+					<description>CSS class of Playlist</description>
+					<defaultvalue>iframewrapper</defaultvalue>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="user" type="Employee">
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+		</itemtype>
+
+		<itemtype code="ZRestaurant" autocreate="true">
+			<deployment table="ZRestaurant" typecode="12346" />
+			<attributes>
+				<attribute qualifier="name"  type="java.lang.String">
+					<defaultvalue>Restaurant</defaultvalue>
+					<description>Name</description>
+					<modifiers unique="true" optional="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="price" type="java.lang.Integer" >
+					<description>Price</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="quality" type="java.lang.Integer" >
+					<description>Quality of Food</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="variety" type="java.lang.Integer" >
+					<description>Variety of Food</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="distance" type="java.lang.Integer" >
+					<description>How distant from Labs</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="tte" type="java.lang.Integer" >
+					<description>Time to Eat</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="ttp" type="java.lang.Integer" >
+					<description>Time to Pay</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="qcm" type="java.lang.Boolean" >
+					<defaultvalue>false</defaultvalue>
+					<modifiers optional="false"/>
+					<description>There's Cheese with Mumu?</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="park" type="java.lang.Integer" >
+					<description>Park</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="finalRank" type="java.lang.Integer">
+					<description>Final Rank</description>
+					<persistence type="dynamic" attributeHandler="restaurantRankHandler"/>
+					<modifiers read="true" write="false" />
+				</attribute>
+			</attributes>
+		</itemtype>
+
+	</itemtypes>
+
+</items>

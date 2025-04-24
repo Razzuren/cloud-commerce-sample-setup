@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://www.zkoss.org/2005/zul"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:h="http://www.w3.org/1999/xhtml"
+		xmlns:w="http://www.zkoss.org/2005/zk/client"
+		xmlns:zk="http://www.zkoss.org/2005/zk"
+		xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.hybris.com/schema/cockpitng/zul/zul.xsd"
+ 		height="100%">
+
+	<h:style>
+
+
+
+	</h:style>
+
+	<div height="100%" class="container">
+
+		<div>
+			<label id="label" value="${labels.hello}" visible="false"/>
+		</div>
+		<vlayout>
+                    <textbox id="jobCodeTextbox" placeholder="Enter job code..."/>
+                    <button id="trackButton" label="Track Sync Job"/>
+                    <label id="statusLabel" value=""/>
+        </vlayout>
+		<div>
+			<label value="${labels.hello}" sclass="yw-labelstyle" visible="false"/>
+		</div>
+
+	</div>
+
+</widget>
+
+
+

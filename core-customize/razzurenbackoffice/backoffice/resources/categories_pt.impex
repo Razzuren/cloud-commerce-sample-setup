@@ -1,0 +1,38 @@
+$productCatalog=electronicsProductCatalog
+$productCatalogName=Electronics Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+
+
+# Language
+$lang=en
+
+
+# Create Categories
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang]
+;1;;Catálogo Aberto;
+;106;;Componentes;
+;1201;;Fixantes;
+;1288;;Kits de câmera;
+;1421;;Binóculos;
+;206;;Armazenamento de dados;
+;571;;Câmeras;
+;574;;Câmeras de filme;
+;575;;Câmeras digitais;
+;576;;Compactos digitais;
+;577;;Webcams;
+;578;;SLR digital;
+;584;;Câmaras de vídeo de mão;
+;585;;Acessórios e suprimentos de câmera;
+;586;;Flashes de câmera;
+;587;;Tripés;
+;588;;Lentes de câmara;
+;597;;Filmes a cores;
+;598;;Filmes pretos e brancos;
+;604;;Fitas de vídeo em branco;
+;814;;Baterias recarregáveis;
+;816;;Fontes de alimentação;
+;827;;Adaptadores e inversores de potência;
+;829;;Carregadores de bateria;
+;902;;Memória Flash;
+;934;;Cabos de câmera;
+

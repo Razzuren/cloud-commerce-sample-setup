@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved
+-->
+<config xmlns="http://www.hybris.com/cockpit/config">
+
+	<!-- razzurenbackoffice UI configuration should be provided here -->
+
+	<context component="explorer-tree" parent="auto" merge-by="module">
+		<explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+			<explorer-tree:navigation-node id="hmc_treenode_razzuren_backoffice" >
+				<explorer-tree:type-node code="UserIframeSettings" id="hmc_typenode_iframesettings" position="10"/>
+				<explorer-tree:type-node code="ZRestaurant" id="hmc_typenode_zrestaurants" position="11"/>
+			</explorer-tree:navigation-node>
+		</explorer-tree:explorer-tree>
+	</context>
+
+	<context type="UserIframeSettings" component="create-wizard" module="razzurenbackoffice" merge-by="type">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch" xmlns:cb="http://www.hybris.com/cockpitng/config/collectionbrowser" xmlns:cv="http://www.hybris.com/cockpitng/component/compareview" xmlns:df="http://www.hybris.com/cockpitng/component/dynamicForms" xmlns:dl="http://www.hybris.com/cockpitng/config/deeplink" xmlns:dsb="http://www.hybris.com/cockpitng/config/dashboard" xmlns:ea="http://www.hybris.com/cockpitng/component/editorArea" xmlns:et="http://www.hybris.com/cockpitng/config/explorertree" xmlns:gv="http://www.hybris.com/cockpitng/component/gridView" xmlns:lv="http://www.hybris.com/cockpitng/component/listView" xmlns:na="http://www.hybris.com/cockpitng/config/notifications" xmlns:ss="http://www.hybris.com/cockpitng/config/simplesearch" xmlns:y="http://www.hybris.com/cockpit/config/hybris" xmlns:yc="http://www.hybris.com/cockpitng/config/common" id="EmployeeWizard" title="create.title(ctx.TYPE_CODE)">
+			<wz:prepare id="iframePrepare">
+				<wz:initialize property="iframePrepare" type="ctx.TYPE_CODE"/>
+			</wz:prepare>
+			<wz:step id="step1" label="create.iframe.general.label" sublabel="create.iframe.general.sublabel">
+				<wz:content id="step1.content">
+					<wz:property-list root="iframePrepare">
+						<wz:property qualifier="src" type="java.lang.String"/>
+						<wz:property qualifier="wrapperclass" type="UserIframeWrapper"/>
+						<wz:property qualifier="user" type="Employee"/>
+					</wz:property-list>
+				</wz:content>
+				<wz:navigation id="step1.navigation">
+					<wz:cancel/>
+					<wz:done>
+						<wz:save property="iframePrepare"/>
+					</wz:done>
+				</wz:navigation>
+			</wz:step>
+		</wz:flow>
+	</context>
+
+	<context merge-by="type" type="UserIframeSettings" component="listview" module="razzurenbackoffice">
+		<lv:list-view xmlns:lv="http://www.hybris.com/cockpitng/component/listView"
+					  xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch"
+					  xmlns:cb="http://www.hybris.com/cockpitng/config/collectionbrowser"
+					  xmlns:cv="http://www.hybris.com/cockpitng/component/compareview" xmlns:df="http://www.hybris.com/cockpitng/component/dynamicForms" xmlns:dl="http://www.hybris.com/cockpitng/config/deeplink" xmlns:dsb="http://www.hybris.com/cockpitng/config/dashboard" xmlns:ea="http://www.hybris.com/cockpitng/component/editorArea" xmlns:et="http://www.hybris.com/cockpitng/config/explorertree" xmlns:gv="http://www.hybris.com/cockpitng/component/gridView" xmlns:na="http://www.hybris.com/cockpitng/config/notifications" xmlns:ss="http://www.hybris.com/cockpitng/config/simplesearch" xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" xmlns:y="http://www.hybris.com/cockpit/config/hybris" xmlns:yc="http://www.hybris.com/cockpitng/config/common">
+			<lv:column qualifier="user"/>
+			<lv:column qualifier="src"/>
+			<lv:column qualifier="wrapperclass"/>
+		</lv:list-view>
+	</context>
+
+	<context type="ZRestaurant" component="create-wizard" module="razzurenbackoffice" merge-by="type">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config"
+				 xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch"
+				 xmlns:cb="http://www.hybris.com/cockpitng/config/collectionbrowser"
+				 xmlns:cv="http://www.hybris.com/cockpitng/component/compareview"
+				 xmlns:df="http://www.hybris.com/cockpitng/component/dynamicForms"
+				 xmlns:dl="http://www.hybris.com/cockpitng/config/deeplink"
+				 xmlns:dsb="http://www.hybris.com/cockpitng/config/dashboard"
+				 xmlns:ea="http://www.hybris.com/cockpitng/component/editorArea"
+				 xmlns:et="http://www.hybris.com/cockpitng/config/explorertree"
+				 xmlns:gv="http://www.hybris.com/cockpitng/component/gridView"
+				 xmlns:lv="http://www.hybris.com/cockpitng/component/listView"
+				 xmlns:na="http://www.hybris.com/cockpitng/config/notifications"
+				 xmlns:ss="http://www.hybris.com/cockpitng/config/simplesearch"
+				 xmlns:y="http://www.hybris.com/cockpit/config/hybris"
+				 xmlns:yc="http://www.hybris.com/cockpitng/config/common"
+				 id="EmployeeWizard" title="create.title(ctx.TYPE_CODE)">
+			<wz:prepare id="restaurantPrepare">
+				<wz:initialize property="restaurantPrepare" type="ctx.TYPE_CODE"/>
+			</wz:prepare>
+			<wz:step id="step1" label="create.zrestaurant.general.label" sublabel="create.zrestaurant.general.sublabel">
+				<wz:content id="step1.content">
+					<wz:property-list root="restaurantPrepare">
+						<wz:property qualifier="name" type="java.lang.String"/>
+						<wz:property qualifier="price" type="java.lang.Integer"/>
+						<wz:property qualifier="quality" type="java.lang.Integer"/>
+						<wz:property qualifier="variety" type="java.lang.Integer"/>
+						<wz:property qualifier="distance" type="java.lang.Integer"/>
+						<wz:property qualifier="tte" type="java.lang.Integer"/>
+						<wz:property qualifier="ttp" type="java.lang.Integer"/>
+						<wz:property qualifier="park" type="java.lang.Integer"/>
+						<wz:property qualifier="qcm" type="java.lang.Boolean"/>
+					</wz:property-list>
+				</wz:content>
+				<wz:navigation id="step1.navigation">
+					<wz:cancel/>
+					<wz:done>
+						<wz:save property="restaurantPrepare"/>
+					</wz:done>
+				</wz:navigation>
+			</wz:step>
+		</wz:flow>
+	</context>
+
+	<context merge-by="type" type="ZRestaurant" component="listview" module="razzurenbackoffice">
+		<lv:list-view xmlns:lv="http://www.hybris.com/cockpitng/component/listView"
+					  xmlns:as="http://www.hybris.com/cockpitng/config/advancedsearch"
+					  xmlns:cb="http://www.hybris.com/cockpitng/config/collectionbrowser"
+					  xmlns:cv="http://www.hybris.com/cockpitng/component/compareview"
+					  xmlns:df="http://www.hybris.com/cockpitng/component/dynamicForms"
+					  xmlns:dl="http://www.hybris.com/cockpitng/config/deeplink"
+					  xmlns:dsb="http://www.hybris.com/cockpitng/config/dashboard"
+					  xmlns:ea="http://www.hybris.com/cockpitng/component/editorArea"
+					  xmlns:et="http://www.hybris.com/cockpitng/config/explorertree"
+					  xmlns:gv="http://www.hybris.com/cockpitng/component/gridView"
+					  xmlns:na="http://www.hybris.com/cockpitng/config/notifications"
+					  xmlns:ss="http://www.hybris.com/cockpitng/config/simplesearch"
+					  xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config"
+					  xmlns:y="http://www.hybris.com/cockpit/config/hybris"
+					  xmlns:yc="http://www.hybris.com/cockpitng/config/common">
+			<lv:column qualifier="name" label="ZName"/>
+			<lv:column qualifier="price" label="ZPrice"/>
+			<lv:column qualifier="quality" label="ZQuality"/>
+			<lv:column qualifier="variety" label="ZVariety"/>
+			<lv:column qualifier="distance" label="ZDistance"/>
+			<lv:column qualifier="tte" label="ZTte"/>
+			<lv:column qualifier="ttp" label="ZTtp"/>
+			<lv:column qualifier="park" label="ZPark"/>
+			<lv:column qualifier="qcm" label="ZQcm"/>
+		</lv:list-view>
+	</context>
+
+
+</config>

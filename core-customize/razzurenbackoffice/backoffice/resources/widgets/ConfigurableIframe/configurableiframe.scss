@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.yw-labelstyle
+{
+	color: $razzurenbackoffice-label-text-color;
+}
+
+.iframe-container {
+	font-family: $razzurenbackoffice-container-font-family;
+    display: flex;
+    padding:10px;
+}
+
+.iframewrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+}
+
+.blinkiframewrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    padding:10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+    background: #42f569;
+  }
+  20% {
+    background: #42cbf5;
+  }
+  40% {
+    background: #de66dc;
+  }
+  60% {
+    background: #ded066;
+  }
+  80% {
+    background: orange;
+  }
+  100% {
+    background: #42f569;
+  }
+}
+

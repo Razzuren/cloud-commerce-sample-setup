@@ -1,0 +1,17 @@
+INSERT_UPDATE ZRestaurant;name[unique=true];price;quality;variety;distance;qcm;park;tte;ttp;
+                         ;Pessin;4;3;3;4;false;5;5;5;
+                         ;Passoquinha;1;5;5;3;true;4;4;4;
+                         ;Greens;1;3;3;5;false;5;0;0;
+                         ;Fazendinha;3;4;4;1;false;3;5;2;
+                         ;Podium;5;2;1;5;false;5;5;5;
+                         ;Bifinho;2;4;2;1;false;4;3;4;
+                         ;Schneider;1;4;2;4;true;5;5;0;
+                         ;Villa D'Assisi;0;5;3;3;false;4;5;5;
+                         ;Bazoo;1;4;2;3;false;0;0;5;
+                         ;Porao;5;3;0;5;false;5;5;5;
+                         ;Ramblas;2;4;4;5;false;5;0;0;
+                         ;Taberna;5;5;0;1;false;5;-5;5;
+                         ;Tenis;5;5;4;4;false;3;3;4;
+                         ;Piatto Di Nonno;0;5;5;0;false;4;0;5;
+                         ;Mangiare;0;5;5;5;false;0;4;4;
+                         ;Piemonte;5;5;4;2;false;5;5;5;
