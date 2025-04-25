@@ -471,7 +471,6 @@
     <extension name='sapcpiorderexchangeoms' />
     <extension name='sapcpiorderexchangeomsb2b' />
     <extension name='ysapcpiomsfulfillment' />
-	<extension name='razzurenbackoffice' />
 
 
 <!-- accelerator + addons are legacy, do not use anymore; just configured to enable end-to-end showcase 
